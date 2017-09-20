@@ -22,7 +22,30 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+First, you need to init the API:
+
+### Rails
+
+```ruby
+# config/initializers/horus.rb
+
+# Note that 'config' is an instance of `Horus::API` (just name it as you like).
+Horus.configure do |config|
+  # API key
+  config.api_key = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+
+  # Optionals
+  config.default_language = 'ar'     # 'en' by default
+  config.default_country_code = 'eg' # nil by default (ISO 3166-1 alfa2)
+  config.default_units = 'metric'    # 'metric' by default
+end
+```
+
+Outside of the configuration file, you can access the `api` object as follows:
+
+````ruby
+Rails.configuration.horus
+````
 
 ## Development
 

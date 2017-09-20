@@ -3,6 +3,9 @@ require 'active_support/core_ext/hash/indifferent_access'
 module Horus
   # Provide an API wrapper for the OpenWeather API
   class API
+    # OpenWeather API version
+    VERSION = '2.5'.freeze
+
     attr_accessor :api_key, :default_language,
                   :default_country_code, :default_units
 
@@ -21,8 +24,8 @@ module Horus
 
     private
 
-    # TODO: Implement this
     def fetch_current
+      @current ||= Queries::Current.new self
     end
   end
 end
