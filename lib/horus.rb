@@ -1,5 +1,6 @@
-require "horus/version"
+require 'horus/version'
 
-module Horus
-  # Your code goes here...
-end
+# Dependencies
+require 'uri'
+require 'rest-client'
+require 'json'
