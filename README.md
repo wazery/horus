@@ -1,16 +1,15 @@
 # Horus
 
-<<<<<<< HEAD
 ![Horus Eye](https://d30y9cdsu7xlg0.cloudfront.net/png/27083-200.png)
 
-Rails Ready OpenWeather Maps gem, named after the Egyptian sky god
+Rails Ready OpenWeather API gem, named after the Egyptian sky god
 
 ## Installation
 
 Add this line to your `Gemfile`:
 
 ```ruby
-    gem 'horus'
+gem 'horus'
 ```
 
 And then execute:
