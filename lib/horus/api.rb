@@ -1,8 +1,10 @@
 require 'active_support/core_ext/hash/indifferent_access'
 
 module Horus
+  # Provide an API wrapper for the OpenWeather API
   class API
-    attr_accessor :api_key, :default_language, :default_country_code, :default_units
+    attr_accessor :api_key, :default_language,
+                  :default_country_code, :default_units
 
     def initialize(options = {})
       options = options.with_indifferent_access
