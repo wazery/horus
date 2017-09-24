@@ -47,6 +47,40 @@ Outside of the configuration file, you can access the `api` object as follows:
 Rails.configuration.horus
 ````
 
+# Usage
+
+## Current Weather
+
+By city name:
+
+````ruby
+json = horus.current city: 'Berlin', country_code: 'de'
+````
+
+By city id:
+
+````ruby
+json = horus.current id: 1234567
+````
+
+By multiple cities ids:
+
+````ruby
+json = horus.current id: [1234567, 7654321]
+````
+
+By geolocation:
+
+````ruby
+json = horus.current lon: -51.20302, lat: 32.53924
+````
+
+By zipcode:
+
+````ruby
+json = horus.current zipcode: 17111, country_code: 'eg'
+````
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec ---` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
